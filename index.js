@@ -15,6 +15,10 @@ app.use(cors()); // CORS - Cross Orgin Resource Sharing.Important protocol for m
 app.use(express.json()); // Which is used to parse the input data to json format.
 
 
+app.get('/',(req,res)=>{
+    res.status(200).send("Welcome Rajesh")
+})
+
 //Adding custom middleware
 app.use('/api',authRoutes);
 app.use('/api',generalRoutes);
