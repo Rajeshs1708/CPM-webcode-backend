@@ -28,7 +28,7 @@ router.get('/get-all-employee', (req, res) => {
     try {
         Employee.find((err, data) => {
             if (err) {
-                return res.status(400).send('error while adding employee')
+                return res.status(400).send('error while getting employee')
             }
             res.status(201).send(data)
             console.log(data);
@@ -36,8 +36,6 @@ router.get('/get-all-employee', (req, res) => {
     } catch (err) {
         res.status(500).send('Internal Server Error', err)
     };
-
-
 });
 
 //To get Specific Employee
