@@ -24,8 +24,6 @@ app.use('/api',authRoutes);
 app.use('/api',generalRoutes);
 app.use('/api',leadsRoutes);
 
-
-
 //PORT
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
