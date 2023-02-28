@@ -60,6 +60,7 @@ io.on('connect',(socket) => {
 const generalRoutes=require('./Routes/employee.route');
 const authRoutes=require('./Routes/auth.route');
 const leadsRoutes = require('./Routes/leads.router')
+const paymentRoutes = require('./Routes/paymentRoute')
 
 
 app.get('/',(req,res)=>{
@@ -69,6 +70,7 @@ app.get('/',(req,res)=>{
 //Adding custom middleware
 app.use('/api',authRoutes);
 app.use('/api',generalRoutes);
+app.use('/api',paymentRoutes);
 app.use('/api',leadsRoutes);
 
 //PORT
