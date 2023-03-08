@@ -17,7 +17,7 @@ const { addUser, removeUser, getUser, getRoomUsers } = require("./entity");
 
 // Instances
 const server = http.createServer(app);
-const io = socketio(server,{cors: { origin: '*' }})
+const io = socketio(server,{cors: { origin: 'https://cpm-app-489603.netlify.app' }})
 
 
 // Socket
